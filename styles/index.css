@@ -20,7 +20,7 @@ body {
 width: 100%;
 background-color: var(--colorFondo);
 font-family: var(--tipografia);
-color: var(--colorTexto);
+color: white;
 overflow-x: hidden;
 box-sizing: border-box;
 }
@@ -80,6 +80,7 @@ height: 40px;
 /* APERTURA DE MI MENU--------- */
 
 main {
+border: solid green;
 width: 100%;
 height: 100%;
 display: flex;
@@ -92,6 +93,7 @@ flex-direction: column;
 
 /* seccion 1 */
 .seccion1 {
+border: solid red;
 width: 90%;
 height: 100%;
 }
@@ -123,8 +125,7 @@ gap: 20px;
 
 /* seccion 2 */
 .seccion2 {
-width: 90%;
-height: 100%;
+width: 80%;
 }
 
 /* centrado de mis titulos */
@@ -139,15 +140,19 @@ width: 350px;
 height: 400px;
 }
 
+.seccion2 p {
+    width: 90%;
+    height: 50px;
+}
 
-.contenedor-img imagen {
+.contenedor-img {
+border: solid red;
 width: 100%;
-height: 100%;
-display: flex;
-justify-content:center;
-align-items: center;
-gap: 100px;
 
+display: grid;
+grid-template-rows: 1fr 1fr;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 10px;
 }
 
 
@@ -158,7 +163,7 @@ footer {
 width: 100%;
 height: auto;
 background-color: #2370d4;
-margin-top: 5px;
+margin-top: 50px;
 display: flex;
 justify-content: space-evenly;
 align-items: center;
@@ -177,7 +182,7 @@ gap: 100px;
 }
 
 i {
-margin: 5px;
+margin: 15px;
 color: white;
 }
 
