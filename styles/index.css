@@ -17,7 +17,6 @@ padding: 0;
 }
 
 body {
-border: solid red;
 width: 100%;
 background-color: var(--colorFondo);
 font-family: var(--tipografia);
@@ -82,7 +81,7 @@ height: 40px;
 
 main {
 width: 100%;
-height: auto;
+height: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -109,6 +108,13 @@ width: 50%;
 height: 100%;
 }
 
+.centradoSeccion1 {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 20px;
+}
+
 /* CIERRE DE MI SECCION 1 */
 
 
@@ -117,59 +123,61 @@ height: 100%;
 
 /* seccion 2 */
 .seccion2 {
-border: 3px solid red;
-width: 100%;
-height: 5%;
+width: 90%;
+height: 100%;
 }
 
 /* centrado de mis titulos */
 .titulo {
-    text-align: center;
-    margin: 5px 0px;
-    gap: 250px;
-    }
-
-
-.contenedor-img {
-width: 100%;
-display: grid;
-grid-template-rows: 1fr;
-grid-template-columns: 1fr 1fr 1fr;
-gap: 10px;
+text-align: center;
+margin: 20px 0px;
+gap: 20px;
 }
 
-.contenedor-img {
+.imagen {
+width: 350px;
+height: 400px;
+}
+
+
+.contenedor-img imagen {
 width: 100%;
 height: 100%;
+display: flex;
+justify-content:center;
+align-items: center;
+gap: 100px;
+
 }
 
-/* HEADER --------------------- */
 
 /*------footer-------*/
 
 footer {
+
 width: 100%;
-height: 100%;
-background-color: var(--colorclaro);
-margin-top: 20px;
+height: auto;
+background-color: #2370d4;
+margin-top: 5px;
 display: flex;
 justify-content: space-evenly;
 align-items: center;
-color: white;
+color: black;
+
 }
+
 .logo-2 {
 width: 40px;
 height: 40px;
 }
-            
+
 .redes-sociales {
 text-align: center;
-gap: 30px;
-}
-            
-i {
-margin: 10px;
-color: white;
+gap: 100px;
 }
 
+i {
+margin: 5px;
+color: white;
+}
 
