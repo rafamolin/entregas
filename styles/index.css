@@ -1,76 +1,78 @@
 /* importaciones fuente cdn/fonts */
-@import url('https://fonts.cdnfonts.com/css/askhora');
+@import url('https://fonts.cdnfonts.com/css/acari-sans');
+
 /* pseudoelementos de variables */
 /* paleta de colores (adobe color)*/
+
 :root {
---tipografia:'Askhora', sans-serif;
---colorFondo:#40528d;
---colorClaro:#e4a795;
---colorTexto:#0a0a0a;
---colorContraste:#bd3e53;
+    --tipografia: 'Acari Sans', sans-serif;
+
+    --colorClaro: #2a4d69;
+    --colorTexto: #e9e9f1e5;
 }
 
 /* margenes */
 * {
-margin: 0;
-padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-width: 100%;
-background-color: var(--colorFondo);
-font-family: var(--tipografia);
-color: white;
-overflow-x: hidden;
-box-sizing: border-box;
+    /* width: 100%;
+    height: 100%; */
+    background: linear-gradient(288deg, rgb(95, 54, 54) 0%, rgb(29, 80, 95) 54%);
+    font-family: var(--tipografia);
+    /* color texto */
+    /* color: rgb(2, 3, 48); */
+    font-size: 25px;
+    overflow-x: hidden;
 }
+
+
 
 /* APERTUTA DE MI HEADER ------- */
 
 
 /* contenedor padre header */
 header {
-width: 100vw;
-height: 7vh;
-}
-
-.menunav {
-background-color: var(--colorFondo);
-width: 100%;
-height: 50px;
+    width: 100vw;
+    height: auto;
 }
 
 /* contenedor padre de las listas a modificar */
 .listamenu {
-background-color: #2370d4;
-height: 100%;
-display: flex;
-justify-content:space-evenly;
-align-items: center;
-gap: 30px;
-list-style: none;
+    /* color de fondo para mi header */
+    background: linear-gradient(4deg, rgb(161, 157, 157) 3%, rgba(3, 66, 109, 0.981) 31%);   
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    /* quito los estilos de las listas */
+    list-style: none;
 
 }
 
 .listamenu a {
-text-decoration: none;
-color: var(--colorTexto);
-font-size: 15px;
-font-weight: bold;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
 
-}
-
-.listamenu a:hover {
-color: white
 }
 
 .logo {
-width: 40px;
-height: 40px;
+    width: 50px;
+    height: 100%;
+    /* ajusto mi logo al tamaño de mi header */
+    display: grid;
+    place-content: center;
 }
 
 .menuHeader {
-    background-color: rgb(85, 125, 233)
+    background: linear-gradient(4deg, rgba(3, 66, 109, 0.981) 31%);
 }
 
 /* CIERRE DE MI HEADER----------*/
@@ -80,109 +82,205 @@ height: 40px;
 /* APERTURA DE MI MENU--------- */
 
 main {
-border: solid green;
-width: 100%;
-height: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
+
+    /* border: solid green; */
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
 }
+
+
 
 /* INICIO DE MI SECCION 1---- */
 
 /* seccion 1 */
 .seccion1 {
-border: solid red;
-width: 90%;
-height: 100%;
+    /* border: 5px solid red; */
+    width: 75%;
+    height: 65%;
+    margin: 100px auto;
+    overflow-x: hidden;
 }
 
-/* ajustar imagen y texto en la seccion1 */
-
-.fotoPerfil {
-width: 350px;
-height: 400px;
+.titulo {
+    text-align: center;
+    padding: 15px;
 }
 
-.seccion1 p {
-width: 50%;
-height: 100%;
-}
+
 
 .centradoSeccion1 {
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
 }
+
+.centradoSeccion1 img,
+.centradoSeccion1 p {
+    width: 30%;
+    height: 100%;
+}
+
+.centradoSeccion1 p {
+    width: 80%;
+    height: 100%;
+}
+
+.Perfil-profesional{
+    /* border: solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Perfil-profesional a{
+    /* border: solid red; */
+    background: linear-gradient(4deg, rgb(161, 157, 157) 3%, rgba(3, 66, 109, 0.981) 31%);
+    color: white;
+    padding: 5px 30px;
+}
+
+.Perfil-profesional a:hover{
+    transform: scale(1.1);
+    background-color: black;
+}
+
+
 
 /* CIERRE DE MI SECCION 1 */
 
 
+
+
+
+
+/* inicio de mi slyder */
+
+.contenedor-slider{
+    width: 20%;
+    height: 10%;
+    margin: 1px auto;
+    overflow-x: hidden;
+}
+
+.slider{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    animation-name: deslizar;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    }
+
+@keyframes deslizar {
+    from{
+        transform: translateX(0%);
+        /* transform: scale(0.5); */
+    }
+    50%{
+        transform: translatex(-150%);       
+    }
+    to{
+        transform: translateX(-300%);
+        /* transform: scale(1.2); */
+    }
+}
+
+.contenedor-slider img{
+    height: 100%;
+    width: 100%;
+}
+
+
+/* cierre de mi slyder */
+
+
+
+
+
+
+
 /*  INICIO DE MI SECCION 2 */
 
-
-/* seccion 2 */
 .seccion2 {
-width: 80%;
+    /* border: solid green; */
+    width: 70%;
+    height: 65%;
+    margin: 100px auto;
+    overflow-x: hidden;
 }
 
 /* centrado de mis titulos */
 .titulo {
-text-align: center;
-margin: 20px 0px;
-gap: 20px;
+    text-align: center;
+    padding: 15px
+}
+
+
+.contenedor-img {
+    /* border: solid red; */
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
 }
 
 .imagen {
-width: 350px;
-height: 400px;
+    width: 100%;
+    height: 100%;
 }
 
 .seccion2 p {
-    width: 90%;
-    height: 50px;
-}
-
-.contenedor-img {
-border: solid red;
-width: 100%;
-
-display: grid;
-grid-template-rows: 1fr 1fr;
-grid-template-columns: 1fr 1fr 1fr;
-gap: 10px;
+    width: 100%;
+    height: 100%;
 }
 
 
 /*------footer-------*/
 
 footer {
-
-width: 100%;
-height: auto;
-background-color: #2370d4;
-margin-top: 50px;
-display: flex;
-justify-content: space-evenly;
-align-items: center;
-color: black;
-
+    /* border: solid red; */
+    width: 100%;
+    height: 100%;
 }
 
-.logo-2 {
-width: 40px;
-height: 40px;
+
+/* diseño responsive */
+
+/* diseño para tablet */
+
+@media screen and (min-width:500px) and (max-width:1024px){
+    .contenedor-img{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
-.redes-sociales {
-text-align: center;
-gap: 100px;
-}
 
-i {
-margin: 15px;
-color: white;
-}
+/* diseño para celular */
+@media screen and (max-width:490px){
+    .listamenu{
+        display: flex;
+        flex-direction: column;
+    }
 
+    .centradoSeccion1 {
+        display: flex;
+        flex-direction: column;
+        }
+
+        .contenedor-img{
+        display: flex;
+        flex-direction: column;
+        }    
+}
